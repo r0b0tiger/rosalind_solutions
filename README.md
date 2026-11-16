@@ -15,7 +15,7 @@ PROT - given a string of RNA, goal is to return the string of amino acids to whi
 
 SUBS - given two strings, where the first is longer than the second and the second is meant to be a substring of the first, goal is to return every starting position where the substring can be found the longer string. The assumption is that positions are 1-based instead of 0-based. Python is natively 0-based.
 
-PRTM
+PRTM - given a amino acid string, goal is to return the atomic mass of the peptide, rounded to the thousandth.
 
 REVP
 
