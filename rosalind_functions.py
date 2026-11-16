@@ -187,3 +187,10 @@ def transl8n(x):
     return ''.join(prot_seq)
 
 #SUBS
+def substr_pos(x, y):
+    x_pos = range(len(x))
+    list_pos = []
+    for i in x_pos:
+        if x[i:i+len(y)] == y:
+            list_pos.append(str(i+1))
+    return ' '.join(list_pos)
