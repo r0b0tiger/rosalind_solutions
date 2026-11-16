@@ -7,13 +7,13 @@ RNA - given a DNA string of a certain length, goal is to return a RNA string whi
 
 REVC - given a DNA string of a certain length, goal is to return the reverse complement of the DNA string. If the given string is arranged from 5' to 3', the return string should be arranged 5' to 3'.
 
-GC
+GC - given a long, single string made up of many DNA sequences, separated by FASTA ids, goal is to return the FASTA id of the sequence with the largest GC content, along with its corresponding GC content, expressed as a float number between 0 to 100.
 
-HAMM
+HAMM - given two DNA strings of equal length, goal is to return the Hamming distance between the strings.
 
-PROT
+PROT - given a string of RNA, goal is to return the string of amino acids to which this would correspond if the RNA were translated into protein.
 
-SUBS
+SUBS - 
 
 PRTM
 
