@@ -211,9 +211,10 @@ def pep_mass(x):
 #REVP
 def rev_pal_pl(x):
     y = x.strip('>Rosalind_1234567890\n').replace('\n','')
-    import string
+    compls_dict = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
     def rev_compl(z):
-        return z.translate(string.maketrans('ATCG', 'TAGC'))[::-1]
+        for i in reversed(z):
+        return ''.join(compls_dict[i])
     def rev_pal_chk(z):
         return z == rev_compl(z)
     pos_len_list = []
