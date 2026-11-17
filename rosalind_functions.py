@@ -229,3 +229,37 @@ def rev_pal_pl(x):
     return ans
 
 #TRAN
+def tran_tran_rat(x):
+    ct = 0
+    strhold = ''
+    idhold = ''
+    seq_dict = {}
+    while ct < len(x):
+        if x[ct] == '>':
+            idhold = x[ct:ct+14]
+            strhold = ''
+            seq_dict[idhold] = strhold
+        elif x[ct] != '>':
+                strhold = strhold + x[ct]
+                seq_dict[idhold] = strhold
+        ct += 1
+    seq_list = []
+    for i in seq_dict:
+            seq_dict[i] = seq_dict[i].strip('>Rosalind_0987654321\n').replace('\n','')
+            seq_list.append(seq_dict[i])
+    zero_pos = range(len(seq_list[0]))
+    one_pos = range(len(seq_list[1]))
+    transt = 0
+    transv = 0
+    for i in zero_pos:
+        if seq_list[0][i] == seq_list[1][i]:
+            continue
+        elif seq_list[0][i] == 'A' and seq_list[1][i] == 'G' or seq_list[0][i] == 'G' and seq_list[1][i] == 'A':
+            transt = transt + 1
+        elif seq_list[0][i] == 'C' and seq_list[1][i] == 'T' or seq_list[0][i] == 'T' and seq_list[1][i] == 'C':
+            transt = transt + 1
+        elif seq_list[0][i] == 'A' and seq_list[1][i] == 'C' or 'T' or seq_list[0][i] == 'G' and seq_list[1][i] == 'C' or 'T':
+            transv = transv + 1
+        elif seq_list[0][i] == 'C' and seq_list[1][i] == 'A' or 'G' or seq_list[0][i] == 'T' and seq_list[1][i] == 'A' or 'G':
+            transv = transv + 1
+    return float(transt)/transv
