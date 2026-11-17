@@ -19,4 +19,4 @@ PRTM - given a amino acid string, goal is to return the atomic mass of the pepti
 
 REVP - given a DNA string of a certain length in FASTA format, goal is to return the starting position and length of every reverse palindrome within the string which is between 4 to 12 characters long. The pairs may return in any order, but should be separated by newlines, while the reported position and length are separated by a single space.
 
-TRAN - 
+TRAN - given two DNA strings of equal length in FASTA format, goal is to return the transition/transversion ratio of string 1 to string 2.
