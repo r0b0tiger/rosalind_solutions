@@ -209,3 +209,23 @@ def pep_mass(x):
     return round(mass, 3)
 
 #REVP
+def rev_pal_pl(x):
+    y = x.strip('>Rosalind_1234567890\n').replace('\n','')
+    import string
+    def rev_compl(z):
+        return z.translate(string.maketrans('ATCG', 'TAGC'))[::-1]
+    def rev_pal_chk(z):
+        return z == rev_compl(z)
+    pos_len_list = []
+    for i in range(4, 13):
+        for o  in range(len(y) - i + 1):
+            substr = y[o:o+i]
+            if rev_pal_chk(substr):
+                pos_len_list.append((o+1, i))
+    ans = ''
+    for i in range(len(pos_len_list)):
+        ans = ans + str(pos_len_list[i][0]) + ' ' + str(pos_len_list[i][1])
+        ans = ans + '\n'
+    return ans
+
+#TRAN
